@@ -1,0 +1,137 @@
+.jcrd-tree {
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-left: 9px;
+    position: relative;
+}
+.jcrd-tree::after {
+    border-left: 1px solid #fff;
+    bottom: 0;
+    content: "";
+    display: inline-block;
+    left: -15px;
+    position: absolute;
+    top: 15px;
+    z-index: 1;
+}
+
+.jcrd-tree .jcrd-tree-package-content:last-child:after {
+    border-left: 1px solid #fff;
+    bottom: 0;
+    content: "";
+    display: inline-block;
+    left: -15px;
+    position: absolute;
+    top: 15px;
+    z-index: 1;
+}
+.jcrd-tree .jcrd-tree-package {
+    cursor: pointer;
+    min-height: 20px;
+    width: auto;
+}
+.jcrd-tree .jcrd-tree-package .jcrd-tree-package-header {
+    height: 20px;
+    line-height: 20px;
+    position: relative;
+}
+.jcrd-tree .jcrd-tree-package .jcrd-tree-package-header:hover {
+    background-color: #f0f7fc;
+}
+.jcrd-tree .jcrd-tree-package .jcrd-tree-package-header .jcrd-tree-package-name {
+    display: inline;
+    z-index: 2;
+}
+.jcrd-tree .jcrd-tree-package .jcrd-tree-package-header .jcrd-tree-package-name {
+    margin-left: 2px;
+}
+.jcrd-tree .jcrd-tree-package:last-child:after {
+    border-left: 1px solid #fff;
+    bottom: 0;
+    content: "";
+    display: inline-block;
+    left: -15px;
+    position: absolute;
+    top: 15px;
+    z-index: 1;
+}
+.jcrd-tree .jcrd-tree-package-content {
+    margin-left: 23px;
+    position: relative;
+}
+.jcrd-content-hide {
+    display: none;
+}
+.jcrd-tree .jcrd-tree-package-content:before {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #67b2dd;
+    border-image: none;
+    border-style: dotted;
+    border-width: 0 0 0 1px;
+    bottom: 16px;
+    content: "";
+    display: inline-block;
+    left: -14px;
+    position: absolute;
+    top: -14px;
+    z-index: 1;
+}
+.jcrd-tree .jcrd-tree-item {
+    cursor: pointer;
+    height: 20px;
+    line-height: 20px;
+}
+.jcrd-tree .jcrd-tree-item:hover {
+    background-color: #f0f7fc;
+}
+.jcrd-tree .jcrd-tree-item .jcrd-tree-item-name {
+    margin-left: 3px;
+}
+.jcrd-tree .jcrd-tree-package {
+    position: relative;
+}
+.jcrd-tree .jcrd-tree-package:before {
+    border-top: 1px dotted #67b2dd;
+    content: "";
+    display: inline-block;
+    height: 0;
+    left: -13px;
+    position: absolute;
+    top: 14px;
+    width: 18px;
+    z-index: 1;
+}
+.jcrd-tree .jcrd-tree-selected {
+    background-color: rgba(98, 168, 209, 0.1);
+    color: #6398b0;
+}
+.jcrd-tree .jcrd-tree-package {
+    border: 1px solid #fff;
+}
+.jcrd-tree .jcrd-tree-package .jcrd-tree-package-header {
+    border-radius: 0;
+    box-sizing: content-box;
+    color: #4d6878;
+    margin: 0;
+    padding: 5px;
+}
+.jcrd-ico-open{
+    margin-right: 5px;
+}
+.jcrd-ico-choose{
+    cursor: default;
+}
+
+.jcrd-disabled, .jcrd-disabled .jcrd-ico-choose{
+    cursor: not-allowed;
+}
+
+.jcrd-tree .jcrd-tree-package .jcrd-disabled:hover {
+    background-color: #ffffff;
+}
+.jcrd-tree .jcrd-tree-package .jcrd-disabled .fa, .jcrd-tree .jcrd-tree-package .jcrd-disabled .jcrd-tree-package-name{
+    color: #8da8b8;
+}
