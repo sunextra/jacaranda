@@ -33,13 +33,13 @@
             var $parent = $(parent);
             var $expandDom = $($parent.children()[0]);
             if ($expandDom.hasClass("fa-plus-square-o")) {
-                return tree.expand($parent, tree);
+                return tree.open($parent, tree);
             }
             if ($expandDom.hasClass("fa-minus-square-o")) {
-                return tree.unexpand($parent, tree);
+                return tree.close($parent, tree);
             }
         },
-        expand: function ($parent, tree) {
+        open: function ($parent, tree) {
             var $expandDom = $($parent.children()[0]);
             var $body = $($parent.children(".jcrd-tree-package-name")[0]);
             $expandDom.removeClass("fa-plus-square-o");
@@ -66,12 +66,14 @@
                 $expandDom.addClass("fa-minus-square-o");
                 $parent.next(".jcrd-tree-package-content").removeClass("jcrd-content-hide");
             }
+            tree.target.trigger("jcrd.open.after", [$expandDom.next()]);
         },
-        unexpand: function ($parent, tree) {
+        close: function ($parent, tree) {
             var $expandDom = $($parent.children()[0]);
             $expandDom.removeClass("fa-minus-square-o");
             $expandDom.addClass("fa-plus-square-o");
             $parent.next(".jcrd-tree-package-content").addClass("jcrd-content-hide");
+            tree.target.trigger("jcrd.close.after", [$expandDom.next()]);
         },
         choose: function (chooseIco, tree) {
             var $chooseIco = $(chooseIco);
